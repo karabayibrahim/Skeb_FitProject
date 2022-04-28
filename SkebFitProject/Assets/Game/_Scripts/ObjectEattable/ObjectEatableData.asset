@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cc0568a07ab51944b11cd5259659ae2, type: 3}
+  m_Name: ObjectEatableData
+  m_EditorClassIdentifier: 
+  ObjectEattables:
+  - {fileID: 4733783919543241731, guid: a37ebf0e7b87246b08928f06a6af1cdf, type: 3}
+  - {fileID: 6347193309454180322, guid: dd620913b7a7acb4194b91f3554ba784, type: 3}
+  - {fileID: 542219316420490371, guid: 38e58803a4d21d1428acf7a55d84fa50, type: 3}
