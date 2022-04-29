@@ -747,7 +747,7 @@ ModelImporter:
     - name: mixamorig:LeftHandThumb1
       parentName: mixamorig:LeftHand
       position: {x: 0.13045771, y: 0.18887298, z: 0.022152254}
-      rotation: {x: 0.05414446, y: 0.011048352, z: -0.32916954, w: 0.94265246}
+      rotation: {x: 0.054144464, y: 0.011048353, z: -0.32916957, w: 0.9426525}
       scale: {x: 0.9999998, y: 0.99999964, z: 0.9999998}
     - name: mixamorig:LeftHandThumb2
       parentName: mixamorig:LeftHandThumb1
@@ -782,9 +782,9 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Head.001
       parentName: mixamorig:Head
-      position: {x: -0.000000030538704, y: 0.08277954, z: 0.3050995}
-      rotation: {x: 0.83271116, y: 9.624329e-15, z: 7.3397736e-14, w: 0.5537076}
-      scale: {x: 1, y: 1, z: 0.99999994}
+      position: {x: 0, y: 0.167, z: 0.156}
+      rotation: {x: 0.86295825, y: -0.00000010534241, z: -0.00000019481423, w: 0.5052752}
+      scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Head.001_end
       parentName: mixamorig:Head.001
       position: {x: -0, y: 0.5143341, z: 0}

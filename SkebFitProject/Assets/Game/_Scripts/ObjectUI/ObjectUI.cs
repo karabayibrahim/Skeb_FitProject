@@ -63,8 +63,9 @@ public class ObjectUI : MonoBehaviour
             MyCount--;
             TextUpdate();
             firstStatus = true;
+            Debug.Log("Bastım");
         }
-        
+
     }
 
     private void AdjustComponenets() 
@@ -100,6 +101,7 @@ public class ObjectUI : MonoBehaviour
     public void SpawnBoolFalse()
     {
         spawnControl = false;
+        GameManager.Instance.WinControl();
     }
 
     public void TextUpdate()

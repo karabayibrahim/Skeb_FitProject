@@ -5,7 +5,7 @@ using DG.Tweening;
 public class ObjectEattable : MonoBehaviour
 {
     [SerializeField] private ObjectType objectType;
-    private bool collisionBool = false;
+    public bool collisionBool = false;
     void Start()
     {
         

@@ -6,4 +6,6 @@ public enum HumanAnimType
 {
     SITIDLE,
     IDLE,
+    KUVET,
+    TUTMA,
 }

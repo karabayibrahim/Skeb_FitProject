@@ -153,6 +153,12 @@ public class Human : MonoBehaviour
             case HumanAnimType.SITIDLE:
                 anim.CrossFade("Sitting Idle",0.01f);
                 break;
+            case HumanAnimType.KUVET:
+                anim.CrossFade("Kuvet", 0.01f);
+                break;
+            case HumanAnimType.TUTMA:
+                anim.CrossFade("Tutunma", 0.01f);
+                break;
             default:
                 break;
         }
@@ -180,15 +186,19 @@ public class Human : MonoBehaviour
 
     private void RndAnimation()
     {
-        var rnd = Random.Range(0, 2);
-        if (rnd==0)
+        if (HumanAnimType!=HumanAnimType.TUTMA)
         {
-            anim.CrossFade("Arm", 0.01f);
+            var rnd = Random.Range(0, 2);
+            if (rnd == 0)
+            {
+                anim.CrossFade("Arm", 0.01f);
+            }
+            else
+            {
+                anim.CrossFade("ArmJump", 0.01f);
+            }
         }
-        else
-        {
-            anim.CrossFade("ArmJump", 0.01f);
-        }
+        
 
     }
 }

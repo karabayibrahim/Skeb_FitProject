@@ -780,9 +780,9 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Head.001
       parentName: mixamorig:Head
-      position: {x: -1.9618373e-11, y: 0.08036072, z: 0.23666231}
-      rotation: {x: 0.82053095, y: -0.000000068140324, z: -0.00000009781494, w: 0.57160205}
-      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+      position: {x: 0, y: 0.167, z: 0.156}
+      rotation: {x: 0.86295825, y: -0.00000010534241, z: -0.00000019481423, w: 0.5052752}
+      scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Head.001_end
       parentName: mixamorig:Head.001
       position: {x: -0, y: 0.554523, z: 0}

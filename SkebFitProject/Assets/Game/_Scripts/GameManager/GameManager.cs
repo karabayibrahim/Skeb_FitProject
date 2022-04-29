@@ -1,14 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class GameManager : MonoSingleton<GameManager>
 {
     public ObjectSpawner ObjectSpawner;
     public ObjectUIData ObjectUIData;
+    public UIManager UIManager;
     //public ObjectEatableData ObjectEatableData;
     public Transform SpawnPoint;
     public Level CurrentLevel;
+
+    public GameObject DestroyPar;
+    public static Action WinEvent;
+    public static Action FailEvent;
     void Start()
     {
         
@@ -30,10 +35,28 @@ public class GameManager : MonoSingleton<GameManager>
             {
                 if (hit.collider.tag=="Eatable")
                 {
+                    var par = Instantiate(DestroyPar, hit.collider.gameObject.transform.position,Quaternion.identity);
                     Destroy(hit.transform.gameObject);
+                    Destroy(par, 0.5f);
                 }
             }
         }
     }
 
+    public void WinControl()
+    {
+        if (CurrentLevel.ObjectUIs[0].MyCount<=0&& CurrentLevel.ObjectUIs[1].MyCount <=0&& CurrentLevel.ObjectUIs[2].MyCount <=0)
+        {
+            WinEvent?.Invoke();
+        }
+    }
+
+    public void FailControl()
+    {
+        if (CurrentLevel.ObjectUIs[0].MyCount > 0 || CurrentLevel.ObjectUIs[1].MyCount > 0 || CurrentLevel.ObjectUIs[2].MyCount > 0)
+        {
+            FailEvent?.Invoke();
+        }
+
+    }
 }

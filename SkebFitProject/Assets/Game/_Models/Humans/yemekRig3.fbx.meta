@@ -768,8 +768,8 @@ ModelImporter:
       scale: {x: 1, y: 0.99999994, z: 0.99999994}
     - name: mixamorig:Head
       parentName: mixamorig:Neck
-      position: {x: -1.27784e-10, y: 0.386214, z: -0.16007362}
-      rotation: {x: 2.1684223e-16, y: 2.1316177e-14, z: -1.0058515e-21, w: 1}
+      position: {x: 0, y: 0.173, z: 0.013}
+      rotation: {x: -0.060660318, y: 0.0000000010578913, z: -0.000000022338288, w: 0.99815845}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:HeadTop_End
       parentName: mixamorig:Head
@@ -783,8 +783,8 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Head.001
       parentName: mixamorig:Neck
-      position: {x: -9.738869e-11, y: 0.4914093, z: 0.09604316}
-      rotation: {x: 0.8362955, y: -0.00000013071985, z: -0.0000001993884, w: 0.548279}
+      position: {x: 0, y: 0.167, z: 0.156}
+      rotation: {x: 0.86295825, y: -0.00000010534241, z: -0.00000019481423, w: 0.5052752}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Head.001_end
       parentName: mixamorig:Head.001
@@ -965,7 +965,7 @@ ModelImporter:
       scale: {x: 100, y: 100, z: 100}
     - name: kadin3.001
       parentName: yemekRig3(Clone)
-      position: {x: 0.000000007152557, y: 0.000000011920916, z: 0.000000058412546}
+      position: {x: 0.000000007152557, y: 0.000000011920916, z: 1.448}
       rotation: {x: 0.00000008146036, y: 0.0000000020302833, z: -2.421438e-10, w: 1}
       scale: {x: 100, y: 100, z: 100}
     - name: kas.003
