@@ -67,7 +67,7 @@ public class UIManager : MonoBehaviour
 
     private void NextStatus()
     {
-        if (PlayerPrefs.GetInt("LevelIndex") > 4)
+        if (PlayerPrefs.GetInt("LevelIndex") >= 4)
         {
             PlayerPrefs.SetInt("LevelIndex", PlayerPrefs.GetInt("LevelIndex") + 1);
             SceneManager.LoadScene("Level" + Random.Range(1, 5));

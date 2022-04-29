@@ -290,8 +290,9 @@ MonoBehaviour:
   UIManager: {fileID: 0}
   SpawnPoint: {fileID: 1690203224}
   CurrentLevel: {fileID: 0}
-  DestroyPar: {fileID: 0}
-  WinPar: {fileID: 0}
+  DestroyPar: {fileID: 8870534030419068797, guid: f9ad80e42b4752846aeba130cc214807,
+    type: 3}
+  WinPar: {fileID: 5324882774757322154, guid: 2ecbf17419ad74d48a6aabdd1f33c324, type: 3}
   ObjectEattables: []
 --- !u!4 &279463237
 Transform:
