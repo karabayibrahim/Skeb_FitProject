@@ -290,6 +290,9 @@ MonoBehaviour:
   UIManager: {fileID: 0}
   SpawnPoint: {fileID: 1690203224}
   CurrentLevel: {fileID: 0}
+  DestroyPar: {fileID: 0}
+  WinPar: {fileID: 0}
+  ObjectEattables: []
 --- !u!4 &279463237
 Transform:
   m_ObjectHideFlags: 0
@@ -707,7 +710,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1242, y: 2208}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
