@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using TapticPlugin;
 public class ObjectEattable : MonoBehaviour
 {
     [SerializeField] private ObjectType objectType;
@@ -23,6 +24,8 @@ public class ObjectEattable : MonoBehaviour
         {
             if (!collisionBool)
             {
+                if (PlayerPrefs.GetInt("onOrOffVibration") == 1)
+                    TapticManager.Impact(ImpactFeedback.Light);
                 gameObject.transform.DOScale(new Vector3(gameObject.transform.localScale.x + 0.2f, gameObject.transform.localScale.y + 0.2f, gameObject.transform.localScale.z + 0.2f), 0.1f).SetLoops(2, LoopType.Yoyo);
                 GameManager.Instance.CurrentLevel.TargetHuman.Swelling();
             }

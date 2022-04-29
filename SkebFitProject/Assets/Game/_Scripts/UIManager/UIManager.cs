@@ -33,8 +33,10 @@ public class UIManager : MonoBehaviour
         TapToButton.onClick.AddListener(TapToStatus);
         RestartButton.onClick.AddListener(RestartStatus);
         RetryButton.onClick.AddListener(RestartStatus);
+        NextButton.onClick.AddListener(NextStatus);
         GameManager.WinEvent += WinStatus;
         GameManager.FailEvent += FailStatus;
+        LevelText.text = "LEVEL" + " " + PlayerPrefs.GetInt("LevelIndex");
     }
 
     private void OnDisable()
@@ -42,6 +44,7 @@ public class UIManager : MonoBehaviour
         TapToButton.onClick.RemoveListener(TapToStatus);
         RestartButton.onClick.RemoveListener(RestartStatus);
         RetryButton.onClick.RemoveListener(RestartStatus);
+        NextButton.onClick.RemoveListener(NextStatus);
         GameManager.WinEvent -= WinStatus;
         GameManager.FailEvent -= FailStatus;
     }
@@ -60,6 +63,20 @@ public class UIManager : MonoBehaviour
     private void RestartStatus()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void NextStatus()
+    {
+        if (PlayerPrefs.GetInt("LevelIndex") > 4)
+        {
+            PlayerPrefs.SetInt("LevelIndex", PlayerPrefs.GetInt("LevelIndex") + 1);
+            SceneManager.LoadScene("Level" + Random.Range(1, 5));
+        }
+        else
+        {
+            PlayerPrefs.SetInt("LevelIndex", PlayerPrefs.GetInt("LevelIndex")+1);
+            SceneManager.LoadScene("Level" + PlayerPrefs.GetInt("LevelIndex"));
+        }
     }
 
     public void WinStatus()

@@ -142,7 +142,7 @@ public class Human : MonoBehaviour
         //});
         //MouthObject.transform.DOLocalRotate(new Vector3(60f, 0, 0), 0.2f);
         Debug.Log("Kapattım");
-        MouthObject.transform.DOLocalMoveY(0.8f, 0.2f);
+        MouthObject.transform.DOLocalMoveY(0.5f, 0.2f);
     }
 
 

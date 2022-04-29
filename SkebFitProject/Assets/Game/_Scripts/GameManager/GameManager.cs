@@ -10,10 +10,11 @@ public class GameManager : MonoSingleton<GameManager>
     //public ObjectEatableData ObjectEatableData;
     public Transform SpawnPoint;
     public Level CurrentLevel;
-
     public GameObject DestroyPar;
+    public GameObject WinPar;
     public static Action WinEvent;
     public static Action FailEvent;
+    public List<ObjectEattable> ObjectEattables = new List<ObjectEattable>();
     void Start()
     {
         
@@ -47,6 +48,12 @@ public class GameManager : MonoSingleton<GameManager>
     {
         if (CurrentLevel.ObjectUIs[0].MyCount<=0&& CurrentLevel.ObjectUIs[1].MyCount <=0&& CurrentLevel.ObjectUIs[2].MyCount <=0)
         {
+            foreach (var item in ObjectEattables)
+            {
+                var newPar = Instantiate(WinPar, item.transform.position, Quaternion.identity);
+                Destroy(newPar, 0.5f);
+                Destroy(item.gameObject);
+            }
             WinEvent?.Invoke();
         }
     }
