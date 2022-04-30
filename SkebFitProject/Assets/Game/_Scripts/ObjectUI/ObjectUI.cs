@@ -15,7 +15,7 @@ public class ObjectUI : MonoBehaviour
 
     private bool firstStatus = false;
     private bool spawnControl = false;
-    private float spawnRate = 0.5f;
+    private float spawnRate = 0.1f;
     private float nextSpawn = 0;
 
     public int MyCount
@@ -102,6 +102,7 @@ public class ObjectUI : MonoBehaviour
     {
         spawnControl = false;
         GameManager.Instance.WinControl();
+        GameManager.Instance.FailControl();
     }
 
     public void TextUpdate()

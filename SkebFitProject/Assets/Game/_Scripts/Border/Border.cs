@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Border : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public bool WinControl = false;
     void Start()
     {
-        
+        GameManager.Instance.Border = this;
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class Border : MonoBehaviour
     {
         if (other.GetComponent<ObjectEattable>().collisionBool&&other.GetComponent<ObjectEattable>()!=null)
         {
-            GameManager.Instance.FailControl();
+            WinControl = true;
         }
     }
 }

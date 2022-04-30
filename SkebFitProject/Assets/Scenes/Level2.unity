@@ -219,6 +219,7 @@ MonoBehaviour:
   ObjectSpawner: {fileID: 0}
   ObjectUIData: {fileID: 11400000, guid: fbe2dcf5f846a0b4192e7057cc614f01, type: 2}
   UIManager: {fileID: 0}
+  Border: {fileID: 0}
   SpawnPoint: {fileID: 1872458922}
   CurrentLevel: {fileID: 0}
   DestroyPar: {fileID: 8870534030419068797, guid: f9ad80e42b4752846aeba130cc214807,
@@ -7368,6 +7369,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: yemekRig4_1
       objectReference: {fileID: 0}
+    - target: {fileID: 7443990484441206816, guid: fdf07b8f0f1931c41b35fc7eb114d086,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.581
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdf07b8f0f1931c41b35fc7eb114d086, type: 3}
 --- !u!1 &1275627300 stripped
@@ -7852,12 +7858,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9714f457c6972f44cb186a20f24d1570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnUIObjects: 030000000200000000000000
+  SpawnUIObjects: 010000000500000000000000
   ObjectUIs: []
   TargetHuman: {fileID: 0}
-  Object1Count: 5
-  Object2Count: 5
-  Object3Count: 15
+  Object1Count: 25
+  Object2Count: 0
+  Object3Count: 50
 --- !u!4 &1893892219
 Transform:
   m_ObjectHideFlags: 0

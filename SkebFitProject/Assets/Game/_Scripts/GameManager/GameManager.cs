@@ -7,6 +7,7 @@ public class GameManager : MonoSingleton<GameManager>
     public ObjectSpawner ObjectSpawner;
     public ObjectUIData ObjectUIData;
     public UIManager UIManager;
+    public Border Border;
     //public ObjectEatableData ObjectEatableData;
     public Transform SpawnPoint;
     public Level CurrentLevel;
@@ -48,21 +49,24 @@ public class GameManager : MonoSingleton<GameManager>
     {
         if (CurrentLevel.ObjectUIs[0].MyCount<=0&& CurrentLevel.ObjectUIs[1].MyCount <=0&& CurrentLevel.ObjectUIs[2].MyCount <=0)
         {
-            foreach (var item in ObjectEattables)
-            {
-                var newPar = Instantiate(WinPar, item.transform.position, Quaternion.identity);
-                Destroy(newPar, 0.5f);
-                Destroy(item.gameObject);
-            }
+            //foreach (var item in ObjectEattables)
+            //{
+            //    var newPar = Instantiate(WinPar, item.transform.position, Quaternion.identity);
+            //    Destroy(newPar, 0.5f);
+            //    Destroy(item.gameObject);
+            //}
             WinEvent?.Invoke();
         }
     }
 
     public void FailControl()
     {
-        if (CurrentLevel.ObjectUIs[0].MyCount > 0 || CurrentLevel.ObjectUIs[1].MyCount > 0 || CurrentLevel.ObjectUIs[2].MyCount > 0)
+        if (CurrentLevel.ObjectUIs[0].MyCount <= 0 && CurrentLevel.ObjectUIs[1].MyCount <= 0 && CurrentLevel.ObjectUIs[2].MyCount <= 0)
         {
-            FailEvent?.Invoke();
+            if (Border.WinControl)
+            {
+                FailEvent?.Invoke();
+            }
         }
 
     }

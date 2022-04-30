@@ -9,7 +9,7 @@ public class ObjectEattable : MonoBehaviour
     public bool collisionBool = false;
     void Start()
     {
-        
+        StartCoroutine(CollisionTry());
     }
 
     // Update is called once per frame
@@ -32,6 +32,13 @@ public class ObjectEattable : MonoBehaviour
             collisionBool = true;
         }
         
+    }
+
+    private IEnumerator CollisionTry()
+    {
+        gameObject.GetComponentInChildren<Collider>().enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        gameObject.GetComponentInChildren<Collider>().enabled = true;
     }
     //private void OnTriggerEnter(Collider other)
     //{

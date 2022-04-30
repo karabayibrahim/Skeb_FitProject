@@ -293,6 +293,7 @@ MonoBehaviour:
   ObjectSpawner: {fileID: 0}
   ObjectUIData: {fileID: 11400000, guid: fbe2dcf5f846a0b4192e7057cc614f01, type: 2}
   UIManager: {fileID: 0}
+  Border: {fileID: 0}
   SpawnPoint: {fileID: 805588348}
   CurrentLevel: {fileID: 0}
   DestroyPar: {fileID: 8870534030419068797, guid: f9ad80e42b4752846aeba130cc214807,
@@ -730,9 +731,9 @@ MonoBehaviour:
   SpawnUIObjects: 040000000200000005000000
   ObjectUIs: []
   TargetHuman: {fileID: 0}
-  Object1Count: 15
-  Object2Count: 5
-  Object3Count: 10
+  Object1Count: 120
+  Object2Count: 0
+  Object3Count: 0
 --- !u!4 &1893892219
 Transform:
   m_ObjectHideFlags: 0
